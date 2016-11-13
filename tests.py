@@ -6,6 +6,7 @@ class Tests(unittest.TestCase):
 
     def test_average(self):
         self.assertEqual(0, stats.average([]))
+        self.assertEqual(1.5, stats.average([1, 2]))
         self.assertEqual(25.35, stats.average([10.1, 20.8, 30.4, 40.1]))
 
     def test_median(self):
