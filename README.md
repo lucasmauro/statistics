@@ -1,8 +1,15 @@
-# statistics-predictions
+# Statstuff
 
-[![Build Status](https://travis-ci.org/lucasmauro/statistics-predictions.svg?branch=master)](https://travis-ci.org/lucasmauro/statistics-predictions)
+[![Build Status](https://travis-ci.org/lucasmauro/statstuff.svg?branch=master)](https://travis-ci.org/lucasmauro/statstuff)
 
-A bunch of statistics, probability and predictions calculators.
-Just for the fun of it. :)
+A simple calculator for statistics such as:
 
+* Average
+* Median
+* Range
+* Standard Deviation
+* Sum
+* Variance
 
+Other statistics will be included soon, such as percentiles, and probabilities.
+Yet in the future, you will be able to make predictions such as linear regression.
