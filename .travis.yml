@@ -1,6 +1,16 @@
 language: python
+
 python:
   - "3.4"
   - "3.5"
 
-script: python setup.py test
+sudo: required
+
+install:
+  - pip install coveralls
+
+script:
+  - coverage run --source=statstuff setup.py test
+
+after_success:
+  - coveralls
