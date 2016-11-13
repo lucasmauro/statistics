@@ -1,5 +1,5 @@
-Test
-====
+Statistics module
+=================
 
 .. automodule:: statistics
     :members:
