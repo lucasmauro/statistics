@@ -21,8 +21,13 @@ def median(values):
 def range(values):
     if len(values) == 0:
         return 0
-    minimum = min(value for value in values)
-    maximum = max(value for value in values)
+    minimum = values.__getitem__(0)
+    maximum = values.__getitem__(0)
+    for value in values:
+        if value < minimum:
+            minimum = value
+        elif value > maximum:
+            maximum = value
     return maximum - minimum
 
 
