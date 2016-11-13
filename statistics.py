@@ -1,8 +1,12 @@
 def average(values):
+    if len(values) == 0:
+        return 0
     return sum(values)/len(values)
 
 
 def median(values):
+    if len(values) == 0:
+        return 0
     values.sort()
     if len(values) % 2 == 0:
         position = int(len(values) / 2)
@@ -15,6 +19,8 @@ def median(values):
 
 
 def range(values):
+    if len(values) == 0:
+        return 0
     minimum = min(value for value in values)
     maximum = max(value for value in values)
     return maximum - minimum
@@ -32,6 +38,8 @@ def sum(values):
 
 
 def variance(values):
+    if len(values) == 0:
+        return 0
     avg = average(values)
     sq_dists = [(value - avg) * (value - avg) for value in values]
     return sum(sq_dists) / len(sq_dists)
