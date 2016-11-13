@@ -1,44 +1,37 @@
-class Statistics:
-    """Calculates a variety of statistics"""
+def average(values):
+    return sum(values)/len(values)
 
-    def __init__(self):
-        pass
 
-    @classmethod
-    def average(cls, values):
-        return cls.sum(values)/len(values)
+def median(values):
+    values.sort()
+    if len(values) % 2 == 0:
+        position = int(len(values) / 2)
+        a = values.__getitem__(position - 1)
+        b = values.__getitem__(position)
+        return (a + b) / 2
+    else:
+        position = int((len(values) / 2) - 0.5)
+        return values.__getitem__(position)
 
-    @classmethod
-    def median(cls, values):
-        values.sort()
-        if len(values) % 2 == 0:
-            position = int(len(values) / 2)
-            a = values.__getitem__(position - 1)
-            b = values.__getitem__(position)
-            return (a + b) / 2
-        else:
-            position = int((len(values) / 2) - 0.5)
-            return values.__getitem__(position)
 
-    @classmethod
-    def range(cls, values):
-        minimum = min(value for value in values)
-        maximum = max(value for value in values)
-        return maximum - minimum
+def range(values):
+    minimum = min(value for value in values)
+    maximum = max(value for value in values)
+    return maximum - minimum
 
-    @classmethod
-    def standard_deviation(cls, values):
-        return cls.variance(values) ** (1/2.0)
 
-    @classmethod
-    def sum(cls, values):
-        total = 0
-        for value in values:
-            total += value
-        return total
+def standard_deviation(values):
+    return variance(values) ** (1/2.0)
 
-    @classmethod
-    def variance(cls, values):
-        average = cls.average(values)
-        sq_dists = [(value - average) * (value - average) for value in values]
-        return cls.sum(sq_dists) / len(sq_dists)
+
+def sum(values):
+    total = 0
+    for value in values:
+        total += value
+    return total
+
+
+def variance(values):
+    avg = average(values)
+    sq_dists = [(value - avg) * (value - avg) for value in values]
+    return sum(sq_dists) / len(sq_dists)
