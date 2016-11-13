@@ -22,6 +22,7 @@ class Tests(unittest.TestCase):
         self.assertEqual(0, stats.range([20]))
         self.assertEqual(0, stats.range([1, 1]))
         self.assertEqual(1, stats.range([1, 2]))
+        self.assertEqual(2, stats.range([2, 1, 3]))
         self.assertEqual(78891, stats.range([19874, 65084, 98765]))
 
     def test_standard_deviation(self):
@@ -43,6 +44,3 @@ class Tests(unittest.TestCase):
         self.assertEqual(0, stats.variance([1, 1, 1, 1, 1]))
         self.assertEqual(0.25, stats.variance([1, 2]))
         self.assertEqual(138.6875, stats.variance([1963, 1983, 1989, 1994]))
-
-if __name__ == '__main__':
-    unittest.main()
