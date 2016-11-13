@@ -1,28 +1,56 @@
-def average(values):
+""""This is a simple statistics calculator"""
+
+
+def average(values: list) -> float:
+    """Calculates the average value from a list of values
+
+    Args:
+        values (list)
+
+    Returns:
+         float: The average value"""
     if len(values) == 0:
         return 0
-    return sum(values)/float(len(values))
+    return sum(values)/len(values)
 
 
-def median(values):
+def median(values: list) -> float:
+    """Returns the central (median) value of a list.
+    If the list has an even amount of values,
+    then the average of the two
+    central values shall be returned.
+
+    Args:
+        values (list)
+
+    Returns:
+        float: The central value"""
     if len(values) == 0:
         return 0
     values.sort()
     if len(values) % 2 == 0:
-        position = int(len(values) / 2.0)
-        a = values.__getitem__(position - 1)
-        b = values.__getitem__(position)
-        return (a + b) / 2.0
+        position = int(len(values) / 2)
+        a = values[position - 1]
+        b = values[position]
+        return float((a + b)) / 2
     else:
-        position = int((len(values) / 2.0) - 0.5)
-        return values.__getitem__(position)
+        position = int((len(values) / 2) - 0.5)
+        return values[position]
 
 
-def range(values):
+def range(values: list) -> float:
+    """Returns the range from the minimum to the maximum value
+    contained within a given list.
+
+    Args:
+        values (list)
+
+    Returns:
+        float: The range of values"""
     if len(values) == 0:
         return 0
-    minimum = values.__getitem__(0)
-    maximum = values.__getitem__(0)
+    minimum = values[0]
+    maximum = values[0]
     for value in values:
         if value < minimum:
             minimum = value
@@ -31,18 +59,39 @@ def range(values):
     return maximum - minimum
 
 
-def standard_deviation(values):
-    return variance(values) ** (1/2.0)
+def standard_deviation(values: list) -> float:
+    """Returns the standard deviation from a list of values.
+
+    Args:
+        values (list)
+
+    Returns:
+        float: The standart deviation"""
+    return variance(values) ** (1/2)
 
 
-def sum(values):
+def sum(values: list) -> float:
+    """Returns the sum of all values in a list.
+
+    Args:
+        values (list)
+
+    Returns:
+        float: The sum of all values"""
     total = 0
     for value in values:
         total += value
     return total
 
 
-def variance(values):
+def variance(values: list) -> float:
+    """Returns the variance of the values in a list.
+
+     Args:
+         values (list)
+
+    Returns:
+        float: The variance of the values"""
     if len(values) == 0:
         return 0
     avg = average(values)

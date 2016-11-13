@@ -18,23 +18,27 @@ class Tests(unittest.TestCase):
 
     def test_range(self):
         self.assertEqual(0, stats.range([]))
+        self.assertEqual(0, stats.range([20]))
         self.assertEqual(0, stats.range([1, 1]))
         self.assertEqual(1, stats.range([1, 2]))
         self.assertEqual(78891, stats.range([19874, 65084, 98765]))
 
     def test_standard_deviation(self):
         self.assertEqual(0, stats.standard_deviation([]))
+        self.assertEqual(0, stats.standard_deviation([45]))
         self.assertEqual(0, stats.standard_deviation([1, 1]))
         self.assertEqual(0.5, stats.standard_deviation([1, 2]))
         self.assertEqual(15.5, stats.standard_deviation([1963, 1994]))
 
     def test_sum(self):
         self.assertEqual(0, stats.sum([]))
+        self.assertEqual(1, stats.sum([1]))
         self.assertEqual(2, stats.sum([1, 1]))
         self.assertEqual(230880, stats.sum([9480, 6548, 65018, 149834]))
 
     def test_variance(self):
-        self.assertEqual(0, stats.sum([]))
+        self.assertEqual(0, stats.variance([]))
+        self.assertEqual(0, stats.variance([50]))
         self.assertEqual(0, stats.variance([1, 1, 1, 1, 1]))
         self.assertEqual(0.25, stats.variance([1, 2]))
         self.assertEqual(138.6875, stats.variance([1963, 1983, 1989, 1994]))
