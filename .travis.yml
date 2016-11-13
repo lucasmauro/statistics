@@ -1,8 +1,8 @@
 language: python
 python:
-  - "3.4"
+  - "3.5"
   - "pypy"
 # command to install dependencies
 install:
 # command to run tests
-script: tests
+script: python tests.py
