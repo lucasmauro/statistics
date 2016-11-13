@@ -1,6 +1,5 @@
 language: python
 python:
   - "3.5"
-  - "pypy"
 
 script: python tests.py
