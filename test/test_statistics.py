@@ -1,6 +1,6 @@
 import unittest
 
-from src import statistics as stats
+from source import statistics as stats
 
 
 class Tests(unittest.TestCase):

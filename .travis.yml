@@ -6,11 +6,8 @@ python:
 
 sudo: required
 
-install:
-  - pip install coveralls
-
 script:
-  - coverage run setup.py test
+  - python setup.py test
 
 after_success:
   - coveralls

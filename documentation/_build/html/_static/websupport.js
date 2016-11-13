@@ -693,7 +693,7 @@
       </p>\
       <div class="comment-header">Comments</div>\
       <div class="comment-loading" id="cn<%id%>">\
-        loading comments... <img src="<%loadingImage%>" alt="" /></div>\
+        loading comments... <img source="<%loadingImage%>" alt="" /></div>\
       <ul id="cl<%id%>" class="comment-ul"></ul>\
       <div id="ca<%id%>">\
       <p class="add-a-comment">Add a comment\
@@ -726,18 +726,18 @@
       <div class="vote">\
         <div class="arrow">\
           <a href="#" id="uv<%id%>" class="vote" title="vote up">\
-            <img src="<%upArrow%>" />\
+            <img source="<%upArrow%>" />\
           </a>\
           <a href="#" id="uu<%id%>" class="un vote" title="vote up">\
-            <img src="<%upArrowPressed%>" />\
+            <img source="<%upArrowPressed%>" />\
           </a>\
         </div>\
         <div class="arrow">\
           <a href="#" id="dv<%id%>" class="vote" title="vote down">\
-            <img src="<%downArrow%>" id="da<%id%>" />\
+            <img source="<%downArrow%>" id="da<%id%>" />\
           </a>\
           <a href="#" id="du<%id%>" class="un vote" title="vote down">\
-            <img src="<%downArrowPressed%>" />\
+            <img source="<%downArrowPressed%>" />\
           </a>\
         </div>\
       </div>\

@@ -2,6 +2,6 @@
 from setuptools import setup
 setup(
     name='statstuff',
-    packages=['src', 'test'],
+    packages=['source', 'test'],
     test_suite='test',
 )

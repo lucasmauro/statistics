@@ -5449,8 +5449,8 @@ function fixCloneNodeIssues( src, dest ) {
 
 		// This path appears unavoidable for IE9. When cloning an object
 		// element in IE9, the outerHTML strategy above is not sufficient.
-		// If the src has innerHTML and the destination does not,
-		// copy the src.innerHTML into the dest.innerHTML. #10324
+		// If the source has innerHTML and the destination does not,
+		// copy the source.innerHTML into the dest.innerHTML. #10324
 		if ( support.html5Clone && ( src.innerHTML && !jQuery.trim(dest.innerHTML) ) ) {
 			dest.innerHTML = src.innerHTML;
 		}
@@ -8223,7 +8223,7 @@ jQuery.extend({
 // Some attributes require a special call on IE
 // http://msdn.microsoft.com/en-us/library/ms536429%28VS.85%29.aspx
 if ( !support.hrefNormalized ) {
-	// href/src property should get the full normalized URL (#10299/#12915)
+	// href/source property should get the full normalized URL (#10299/#12915)
 	jQuery.each([ "href", "src" ], function( i, name ) {
 		jQuery.propHooks[ name ] = {
 			get: function( elem ) {
