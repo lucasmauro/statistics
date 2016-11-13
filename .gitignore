@@ -1,0 +1,3 @@
+*.pyc
+.idea/
+statstuff.egg-info
