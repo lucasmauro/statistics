@@ -8,8 +8,8 @@ class Tests(unittest.TestCase):
         self.assertEqual(25.35, stats.average([10.1, 20.8, 30.4, 40.1]))
 
     def test_median(self):
-        self.assertEqual(3.0192, stats.median([1.0494, 2.689, 3.3494, 4.3374]))
-        self.assertEqual(3.0192, stats.median([3.3494, 2.689, 1.0494, 4.3374]))
+        self.assertEqual(3.01, stats.median([1.0494, 2.68, 3.34, 4.33]))
+        self.assertEqual(3.01, stats.median([3.34, 2.68, 1.0494, 4.33]))
         self.assertEqual(3.35, stats.median([1.9, 2.105, 3.35, 4.401, 5.55]))
         self.assertEqual(3.35, stats.median([3.35, 5.55, 1.9, 4.401, 2.105]))
 
@@ -21,7 +21,7 @@ class Tests(unittest.TestCase):
     def test_standard_deviation(self):
         self.assertEqual(0, stats.standard_deviation([1, 1]))
         self.assertEqual(0.5, stats.standard_deviation([1, 2]))
-        self.assertEqual(11.776565713313877, stats.standard_deviation([1963, 1983, 1989, 1994]))
+        self.assertEqual(15.5, stats.standard_deviation([1963, 1994]))
 
     def test_sum(self):
         self.assertEqual(2, stats.sum([1, 1]))
