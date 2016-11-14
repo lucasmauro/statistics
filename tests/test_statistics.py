@@ -1,9 +1,8 @@
-import unittest
+from unittest import TestCase
+from statstuff import statistics as stats
 
-from source import statistics as stats
 
-
-class Tests(unittest.TestCase):
+class Tests(TestCase):
 
     def test_average(self):
         self.assertEqual(0, stats.average([]))

@@ -19,7 +19,7 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../source/'))
+sys.path.insert(0, os.path.abspath('../statstuff/'))
 
 # -- General configuration ------------------------------------------------
 
@@ -305,7 +305,7 @@ latex_documents = [
 # -- Options for manual page output ---------------------------------------
 
 # One entry per manual page. List of tuples
-# (source start file, name, description, authors, manual section).
+# (statstuff start file, name, description, authors, manual section).
 man_pages = [
     (master_doc, 'statstuff', 'statstuff Documentation',
      [author], 1)
