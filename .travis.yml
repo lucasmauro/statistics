@@ -6,6 +6,9 @@ python:
 
 sudo: required
 
+install:
+  pip install coveralls
+
 script:
   - coverage run --source=statstuff setup.py test
 
