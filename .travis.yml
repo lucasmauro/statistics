@@ -7,10 +7,10 @@ python:
 sudo: required
 
 install:
-  pip install coveralls
+  - pip install coveralls
 
 script:
-  coverage run --source=statstuff setup.py test
+  - coverage run setup.py test && coverage report --omit=doc
 
 after_success:
   coveralls
