@@ -41,11 +41,13 @@
           <div class="body" role="main">
             
   <h1>Source code for statistics</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;&quot;This is a simple statistics calculator&quot;&quot;&quot;</span>
+<span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">division</span>
+
+<span class="sd">&quot;&quot;&quot;&quot;This is a simple statistics calculator&quot;&quot;&quot;</span>
 
 
-<div class="viewcode-block" id="average"><a class="viewcode-back" href="../statistics.html#statistics.average">[docs]</a><span class="k">def</span> <span class="nf">average</span><span class="p">(</span><span class="n">values</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Calculates the average value from a list of values</span>
+<div class="viewcode-block" id="average"><a class="viewcode-back" href="../statistics.html#statistics.average">[docs]</a><span class="k">def</span> <span class="nf">average</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Calculates the average value from a list of numbers</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        values (list)</span>
@@ -57,11 +59,11 @@
     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">values</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="median"><a class="viewcode-back" href="../statistics.html#statistics.median">[docs]</a><span class="k">def</span> <span class="nf">median</span><span class="p">(</span><span class="n">values</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<div class="viewcode-block" id="median"><a class="viewcode-back" href="../statistics.html#statistics.median">[docs]</a><span class="k">def</span> <span class="nf">median</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Returns the central (median) value of a list.</span>
-<span class="sd">    If the list has an even amount of values,</span>
+<span class="sd">    If the list has an even amount of numbers,</span>
 <span class="sd">    then the average of the two</span>
-<span class="sd">    central values shall be returned.</span>
+<span class="sd">    central numbers shall be returned.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        values (list)</span>
@@ -81,7 +83,7 @@
         <span class="k">return</span> <span class="n">values</span><span class="p">[</span><span class="n">position</span><span class="p">]</span></div>
 
 
-<div class="viewcode-block" id="range"><a class="viewcode-back" href="../statistics.html#statistics.range">[docs]</a><span class="k">def</span> <span class="nf">range</span><span class="p">(</span><span class="n">values</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<div class="viewcode-block" id="range"><a class="viewcode-back" href="../statistics.html#statistics.range">[docs]</a><span class="k">def</span> <span class="nf">range</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Returns the range from the minimum to the maximum value</span>
 <span class="sd">    contained within a given list.</span>
 
@@ -102,8 +104,8 @@
     <span class="k">return</span> <span class="n">maximum</span> <span class="o">-</span> <span class="n">minimum</span></div>
 
 
-<div class="viewcode-block" id="standard_deviation"><a class="viewcode-back" href="../statistics.html#statistics.standard_deviation">[docs]</a><span class="k">def</span> <span class="nf">standard_deviation</span><span class="p">(</span><span class="n">values</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Returns the standard deviation from a list of values.</span>
+<div class="viewcode-block" id="standard_deviation"><a class="viewcode-back" href="../statistics.html#statistics.standard_deviation">[docs]</a><span class="k">def</span> <span class="nf">standard_deviation</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the standard deviation from a list of numbers.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        values (list)</span>
@@ -113,7 +115,7 @@
     <span class="k">return</span> <span class="n">variance</span><span class="p">(</span><span class="n">values</span><span class="p">)</span> <span class="o">**</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="sum"><a class="viewcode-back" href="../statistics.html#statistics.sum">[docs]</a><span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="n">values</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<div class="viewcode-block" id="sum"><a class="viewcode-back" href="../statistics.html#statistics.sum">[docs]</a><span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Returns the sum of all values in a list.</span>
 
 <span class="sd">    Args:</span>
@@ -127,7 +129,7 @@
     <span class="k">return</span> <span class="n">total</span></div>
 
 
-<div class="viewcode-block" id="variance"><a class="viewcode-back" href="../statistics.html#statistics.variance">[docs]</a><span class="k">def</span> <span class="nf">variance</span><span class="p">(</span><span class="n">values</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<div class="viewcode-block" id="variance"><a class="viewcode-back" href="../statistics.html#statistics.variance">[docs]</a><span class="k">def</span> <span class="nf">variance</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Returns the variance of the values in a list.</span>
 
 <span class="sd">     Args:</span>

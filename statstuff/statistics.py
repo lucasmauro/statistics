@@ -1,8 +1,10 @@
+from __future__ import division
+
 """"This is a simple statistics calculator"""
 
 
-def average(values: list) -> float:
-    """Calculates the average value from a list of values
+def average(values):
+    """Calculates the average value from a list of numbers
 
     Args:
         values (list)
@@ -14,11 +16,11 @@ def average(values: list) -> float:
     return sum(values)/len(values)
 
 
-def median(values: list) -> float:
+def median(values):
     """Returns the central (median) value of a list.
-    If the list has an even amount of values,
+    If the list has an even amount of numbers,
     then the average of the two
-    central values shall be returned.
+    central numbers shall be returned.
 
     Args:
         values (list)
@@ -38,7 +40,7 @@ def median(values: list) -> float:
         return values[position]
 
 
-def range(values: list) -> float:
+def range(values):
     """Returns the range from the minimum to the maximum value
     contained within a given list.
 
@@ -59,8 +61,8 @@ def range(values: list) -> float:
     return maximum - minimum
 
 
-def standard_deviation(values: list) -> float:
-    """Returns the standard deviation from a list of values.
+def standard_deviation(values):
+    """Returns the standard deviation from a list of numbers.
 
     Args:
         values (list)
@@ -70,7 +72,7 @@ def standard_deviation(values: list) -> float:
     return variance(values) ** (1/2)
 
 
-def sum(values: list) -> float:
+def sum(values):
     """Returns the sum of all values in a list.
 
     Args:
@@ -84,7 +86,7 @@ def sum(values: list) -> float:
     return total
 
 
-def variance(values: list) -> float:
+def variance(values):
     """Returns the variance of the values in a list.
 
      Args:

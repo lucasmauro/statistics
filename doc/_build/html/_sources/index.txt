@@ -8,8 +8,6 @@ Welcome to statstuff's documentation!
 
 This is a simple project for calculating basic statistics, and, hopefully soon, make predictions.
 
-For now, the only requirement is that you run using Python 3.
-
 Contents:
 
 .. toctree::
