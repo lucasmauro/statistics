@@ -1,6 +1,6 @@
 from __future__ import division
 
-""""This is a simple statistics calculator"""
+""""This is a simple probability calculator"""
 
 
 def single_random_event(event, possibilities):
