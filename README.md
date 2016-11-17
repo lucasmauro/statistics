@@ -10,7 +10,7 @@ A simple calculator for statistics and probabilities.
 * Sum
 * Variance
 
-## Probability
+### Probability
 * Single random event
 * Multiple random events
 
