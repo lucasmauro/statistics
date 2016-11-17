@@ -23,7 +23,7 @@ def single_random_event(event, possibilities):
     return matches / len(possibilities)
 
 
-def multiple_random_events(events, possibilities, reposition=True):
+def multiple_random_events(events, possibilities, reposition):
     """Calculates the probability for multiple
     events to happen in a list of possibilities.
 
