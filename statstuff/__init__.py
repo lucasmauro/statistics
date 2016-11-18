@@ -1,2 +1,2 @@
-import probability
-import statistics
+from . import probability
+from . import statistics
