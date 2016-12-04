@@ -12,7 +12,7 @@ def average(values):
     Returns:
          float: The average value"""
     if len(values) == 0:
-        return 0
+        return None
     return sum(values)/len(values)
 
 
@@ -28,7 +28,7 @@ def median(values):
     Returns:
         float: The central value"""
     if len(values) == 0:
-        return 0
+        return None
     values.sort()
     if len(values) % 2 == 0:
         position = int(len(values) / 2)
@@ -50,15 +50,36 @@ def range(values):
     Returns:
         float: The range of values"""
     if len(values) == 0:
+        return None
+    elif len(values) == 1:
         return 0
-    minimum = values[0]
-    maximum = values[0]
-    for value in values:
-        if value < minimum:
-            minimum = value
-        elif value > maximum:
-            maximum = value
-    return maximum - minimum
+    else:
+        minimum, maximum = range_limits(values)
+        return maximum - minimum
+
+
+def range_limits(values):
+    """Returns the smallest and the greatest values
+    contained within a given list.
+
+    Args:
+        values (list)
+
+    Returns:
+        tuple: the smallest and the greatest values"""
+    if len(values) == 0:
+        return None, None
+    elif len(values) == 1:
+        return 0, 0
+    else:
+        minimum = values[0]
+        maximum = values[0]
+        for value in values:
+            if value < minimum:
+                minimum = value
+            elif value > maximum:
+                maximum = value
+        return minimum, maximum
 
 
 def stdev(values):
@@ -69,6 +90,8 @@ def stdev(values):
 
     Returns:
         float: The standart deviation"""
+    if len(values) == 0:
+        return None
     return variance(values) ** (1/2)
 
 
@@ -95,7 +118,7 @@ def variance(values):
     Returns:
         float: The variance of the values"""
     if len(values) == 0:
-        return 0
+        return None
     avg = average(values)
     sq_dists = [(value - avg) ** 2 for value in values]
     return sum(sq_dists) / len(sq_dists)

@@ -6,6 +6,7 @@ A simple calculator for statistics and probabilities.
 * Average
 * Median
 * Range
+* Range Limits
 * Standard Deviation
 * Sum
 * Variance
