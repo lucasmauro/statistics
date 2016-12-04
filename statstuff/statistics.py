@@ -34,7 +34,7 @@ def median(values):
         position = int(len(values) / 2)
         a = values[position - 1]
         b = values[position]
-        return float((a + b)) / 2
+        return (a + b) / 2
     else:
         position = int((len(values) / 2) - 0.5)
         return values[position]
