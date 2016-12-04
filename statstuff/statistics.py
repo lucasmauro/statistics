@@ -61,7 +61,7 @@ def range(values):
     return maximum - minimum
 
 
-def standard_deviation(values):
+def stdev(values):
     """Returns the standard deviation from a list of numbers.
 
     Args:

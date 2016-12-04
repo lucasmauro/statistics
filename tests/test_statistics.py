@@ -25,11 +25,11 @@ class Tests(TestCase):
         self.assertEqual(78891, stats.range([19874, 65084, 98765]))
 
     def test_standard_deviation(self):
-        self.assertEqual(0, stats.standard_deviation([]))
-        self.assertEqual(0, stats.standard_deviation([45]))
-        self.assertEqual(0, stats.standard_deviation([1, 1]))
-        self.assertEqual(0.5, stats.standard_deviation([1, 2]))
-        self.assertEqual(15.5, stats.standard_deviation([1963, 1994]))
+        self.assertEqual(0, stats.stdev([]))
+        self.assertEqual(0, stats.stdev([45]))
+        self.assertEqual(0, stats.stdev([1, 1]))
+        self.assertEqual(0.5, stats.stdev([1, 2]))
+        self.assertEqual(15.5, stats.stdev([1963, 1994]))
 
     def test_sum(self):
         self.assertEqual(0, stats.sum([]))
