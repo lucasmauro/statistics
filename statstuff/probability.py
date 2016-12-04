@@ -3,7 +3,27 @@ from __future__ import division
 """"This is a simple probability calculator"""
 
 
-def single_random_event(event, possibilities):
+def random(events, possibilities, reposition=True):
+    """Calculates the probability for either one or multiple
+    events to happen in a list of possibilities.
+
+    Args:
+        events
+
+        possibilities (list)
+
+        reposition (bool) Whether or not the event that happened should
+         be kept in the list of possibilities
+
+    Returns:
+         float: The probability"""
+    if isinstance(events, list):
+        return __multiple_random_events(events, possibilities, reposition)
+    else:
+        return __single_random_event(events, possibilities)
+
+
+def __single_random_event(event, possibilities):
     """Calculates the probability for a single
     event to happen in a list of possibilities.
 
@@ -23,7 +43,7 @@ def single_random_event(event, possibilities):
     return matches / len(possibilities)
 
 
-def multiple_random_events(events, possibilities, reposition=True):
+def __multiple_random_events(events, possibilities, reposition=True):
     """Calculates the probability for multiple
     events to happen in a list of possibilities.
 
@@ -33,7 +53,7 @@ def multiple_random_events(events, possibilities, reposition=True):
         possibilities (list)
 
         reposition (bool) Whether or not the event that happened should
-         be kept from the list of possibilities
+         be kept in the list of possibilities
 
     Returns:
          float: The probability"""
@@ -43,7 +63,7 @@ def multiple_random_events(events, possibilities, reposition=True):
     calculated_probabilities = []
 
     for event in events:
-        single_probability = single_random_event(event, possibilities)
+        single_probability = random(event, possibilities)
         if single_probability == 0:
             return 0
 
