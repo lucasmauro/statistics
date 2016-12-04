@@ -11,8 +11,7 @@ A simple calculator for statistics and probabilities.
 * Variance
 
 ### Probability
-* Single random event
-* Multiple random events
+* Single or multiple random events
 
 Other statistics and probabilities will be included soon.
 Yet in the future, you will be able to make predictions such as linear regression.
