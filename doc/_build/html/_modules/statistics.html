@@ -59,6 +59,36 @@
     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">values</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">)</span></div>
 
 
+<div class="viewcode-block" id="correlation"><a class="viewcode-back" href="../statistics.html#statistics.correlation">[docs]</a><span class="k">def</span> <span class="nf">correlation</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Calculates the Pearson&#39;s correlation between two sets of values</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">            a Set of values</span>
+
+<span class="sd">            b Set of values</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        float: The Pearson&#39;s correlation value&quot;&quot;&quot;</span>
+    <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">length_b</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">length</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">length_b</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">length</span> <span class="ow">is</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">length_b</span> <span class="ow">is</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="n">sum_of_a</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">sum_of_b</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+    <span class="n">sum_of_a_times_b</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">x</span> <span class="o">*</span> <span class="n">y</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)])</span>
+    <span class="n">a_squared</span> <span class="o">=</span> <span class="p">[</span><span class="n">value</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">a</span><span class="p">]</span>
+    <span class="n">b_squared</span> <span class="o">=</span> <span class="p">[</span><span class="n">value</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">b</span><span class="p">]</span>
+    <span class="n">sum_of_a_squared</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">a_squared</span><span class="p">)</span>
+    <span class="n">sum_of_b_squared</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">b_squared</span><span class="p">)</span>
+
+    <span class="n">h</span> <span class="o">=</span> <span class="p">(</span><span class="n">length</span> <span class="o">*</span> <span class="n">sum_of_a_times_b</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">sum_of_a</span> <span class="o">*</span> <span class="n">sum_of_b</span><span class="p">)</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="p">((</span><span class="n">length</span> <span class="o">*</span> <span class="n">sum_of_a_squared</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">sum_of_a</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span> <span class="o">**</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="p">((</span><span class="n">length</span> <span class="o">*</span> <span class="n">sum_of_b_squared</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">sum_of_b</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span> <span class="o">**</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">h</span> <span class="o">/</span> <span class="p">(</span><span class="n">j</span> <span class="o">*</span> <span class="n">k</span><span class="p">)</span></div>
+
+
 <div class="viewcode-block" id="median"><a class="viewcode-back" href="../statistics.html#statistics.median">[docs]</a><span class="k">def</span> <span class="nf">median</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Returns the central (median) value of a list.</span>
 <span class="sd">    If the list has an even amount of numbers,</span>

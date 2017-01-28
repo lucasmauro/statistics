@@ -4,6 +4,7 @@ A simple calculator for statistics and probabilities.
 
 ### Statistics:
 * Average
+* Correlation (Pearson)
 * Median
 * Range
 * Range Limits

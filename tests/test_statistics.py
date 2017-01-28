@@ -9,6 +9,20 @@ class Tests(TestCase):
         self.assertEqual(1.5, stats.average([1, 2]))
         self.assertEqual(25.35, stats.average([10.1, 20.8, 30.4, 40.1]))
 
+    def test_correlation(self):
+        self.assertEqual(None, stats.correlation([], []))
+        self.assertEqual(None, stats.correlation([1, 2], []))
+        self.assertEqual(None, stats.correlation([], [3, 4]))
+        self.assertEqual(None, stats.correlation([1, 2], [3]))
+        self.assertEqual(0.9808710485773766, stats.correlation(
+            [2, 3, 4, 5, 5, 6, 7, 8],
+            [4, 7, 9, 10, 11, 11, 13, 15]
+        ))
+        self.assertEqual(0.1691457810991552, stats.correlation(
+            [60, 58, 73, 51, 54, 75, 48, 72, 75, 83, 62, 52],
+            [80, 62, 70, 83, 62, 92, 79, 88, 54, 82, 64, 69]
+        ))
+
     def test_median(self):
         self.assertEqual(None, stats.median([]))
         self.assertEqual(3.01, stats.median([1.0494, 2.68, 3.34, 4.33]))

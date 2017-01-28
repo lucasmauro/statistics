@@ -16,6 +16,36 @@ def average(values):
     return sum(values)/len(values)
 
 
+def correlation(a, b):
+    """Calculates the Pearson's correlation between two sets of values
+
+    Args:
+            a Set of values
+
+            b Set of values
+
+    Returns:
+        float: The Pearson's correlation value"""
+    length = len(a)
+    length_b = len(b)
+    if (length is not length_b) or (length is 0) or (length_b is 0):
+        return None
+
+    sum_of_a = sum(a)
+    sum_of_b = sum(b)
+    sum_of_a_times_b = sum([x * y for x, y in zip(a, b)])
+    a_squared = [value ** 2 for value in a]
+    b_squared = [value ** 2 for value in b]
+    sum_of_a_squared = sum(a_squared)
+    sum_of_b_squared = sum(b_squared)
+
+    h = (length * sum_of_a_times_b) - (sum_of_a * sum_of_b)
+    j = ((length * sum_of_a_squared) - (sum_of_a ** 2)) ** (1/2)
+    k = ((length * sum_of_b_squared) - (sum_of_b ** 2)) ** (1/2)
+
+    return h / (j * k)
+
+
 def median(values):
     """Returns the central (median) value of a list.
     If the list has an even amount of numbers,
