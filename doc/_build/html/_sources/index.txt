@@ -6,7 +6,7 @@
 Welcome to statstuff's documentation!
 =====================================
 
-This is a simple project for calculating basic statistics, probabilities, and, hopefully soon, make predictions.
+This is a simple project for calculating basic statistics, probabilities and regressions.
 
 Contents:
 

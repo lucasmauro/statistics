@@ -15,5 +15,7 @@ A simple calculator for statistics and probabilities.
 ### Probability
 * Single or multiple random events
 
-Other statistics and probabilities will be included soon.
-Yet in the future, you will be able to make predictions such as linear regression.
+### Regression
+* Linear (two variables)
+
+Other statistics, probabilities and regressions will be included soon.

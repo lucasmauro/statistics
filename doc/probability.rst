@@ -1,5 +1,5 @@
-Statistics module
-=================
+Probability module
+==================
 
 .. automodule:: probability
     :members:
