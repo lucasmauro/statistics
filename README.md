@@ -1,6 +1,6 @@
 # Statstuff [![Build Status](https://travis-ci.org/lucasmauro/statstuff.svg?branch=master)](https://travis-ci.org/lucasmauro/statstuff) [![Coverage Status](https://coveralls.io/repos/github/lucasmauro/statstuff/badge.svg?branch=master)](https://coveralls.io/github/lucasmauro/statstuff?branch=master)
 
-A simple calculator for statistics and probabilities.
+A simple calculator for statistics, probabilities and regressions.
 
 ### Statistics:
 * Average
