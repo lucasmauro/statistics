@@ -11,7 +11,7 @@ with open('LICENSE') as f:
 
 setup(
     name='statstuff',
-    version='0.0.4',
+    version='0.0.5',
     description='Statistics calculator',
     long_description=readme,
     author='Lucas Mauro',

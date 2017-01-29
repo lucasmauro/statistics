@@ -41,3 +41,11 @@ class Tests(TestCase):
         self.assertEqual(112.5818, reg.predict(self.multiple_features, [2, 5, 0]))
         self.assertEqual(229.54999999999998, reg.predict(self.multiple_features, [25, 34, 64]))
         self.assertEqual(79.13579999999999, reg.predict(self.multiple_features, [2, 2, 2]))
+
+    def test_predict_sigmoid(self):
+        self.assertEqual(0.9999999997231244, reg.predict_sigmoid(self.features, [0]))
+        self.assertEqual(0.9998674190123374, reg.predict_sigmoid(self.features, [-15]))
+        self.assertEqual(3.288160886939343e-08, reg.predict_sigmoid(self.features, [-45]))
+        self.assertEqual(1, reg.predict_sigmoid(self.multiple_features, [1, 1, 1]))
+        self.assertEqual(1.3737327556402954e-18,
+                         reg.predict_sigmoid(self.multiple_features, [-15, -15, -15]))

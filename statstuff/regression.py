@@ -1,5 +1,6 @@
 from __future__ import division
 from statstuff import statistics as stats
+from statstuff import util
 
 """"This is a simple regression calculator"""
 
@@ -50,3 +51,18 @@ def predict(features, parameters):
     predicted_value = feats.pop(0)
     predicted_value += stats.sum([x * y for x, y in zip(feats, params)])
     return predicted_value
+
+
+def predict_sigmoid(features, parameters):
+    """Returns the sigmoid value for the predicted
+    value from givem features and parameters
+
+    Args:
+        features Regression equation features
+
+        parameters Regression equation parameters
+
+    Returns:
+         sigmoid_predicted_value The sigmoid value
+         predicted from features and parameters"""
+    return util.sigmoid(predict(features, parameters))

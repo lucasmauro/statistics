@@ -18,5 +18,6 @@ A simple calculator for statistics and probabilities.
 ### Regression
 * Linear features (two variables)
 * Prediction (multiple variables)
+* Sigmoid prediction (multiple variables)
 
 Other statistics, probabilities and regressions will be included soon.
