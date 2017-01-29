@@ -4,7 +4,7 @@ from statstuff import regression as reg
 
 class Tests(TestCase):
 
-    def test_single_random_event(self):
+    def test_linear(self):
         self.assertEqual(None, reg.linear([], []))
         self.assertEqual(None, reg.linear([1, 2], []))
         self.assertEqual(None, reg.linear([], [3, 4]))
