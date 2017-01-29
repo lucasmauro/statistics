@@ -16,6 +16,7 @@ A simple calculator for statistics and probabilities.
 * Single or multiple random events
 
 ### Regression
-* Linear (two variables)
+* Linear features (two variables)
+* Prediction (multiple variables)
 
 Other statistics, probabilities and regressions will be included soon.
