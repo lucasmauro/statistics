@@ -15,7 +15,7 @@ def linear(x, y):
         y Dependent values
 
     Returns:
-         a The intercept and b the coefficient"""
+         float: The intercept and b the coefficient"""
     length = len(x)
     length_y = len(y)
     if (length is not length_y) or (length is 0) or (length_y is 0):
@@ -40,7 +40,7 @@ def predict(features, parameters):
         parameters Regression equation parameters
 
     Returns:
-         predicted_value The value predicted from features and parameters"""
+         float: The value predicted from features and parameters"""
     feats = features[:]
     params = parameters[:]
     len_f = len(feats)
@@ -63,6 +63,5 @@ def predict_sigmoid(features, parameters):
         parameters Regression equation parameters
 
     Returns:
-         sigmoid_predicted_value The sigmoid value
-         predicted from features and parameters"""
+         float: The sigmoid value predicted from features and parameters"""
     return util.sigmoid(predict(features, parameters))
