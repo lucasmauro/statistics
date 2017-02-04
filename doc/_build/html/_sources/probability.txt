@@ -1,5 +1,5 @@
 Probability module
 ==================
 
-.. automodule:: probability
+.. automodule:: statstuff.probability
     :members:

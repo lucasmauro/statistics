@@ -1,5 +1,5 @@
 Util module
 ===========
 
-.. automodule:: util
+.. automodule:: statstuff.util
     :members:

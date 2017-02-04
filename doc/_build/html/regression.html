@@ -39,8 +39,52 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="regression-module">
-<h1>Regression module<a class="headerlink" href="#regression-module" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-statstuff.regression">
+<span id="regression-module"></span><h1>Regression module<a class="headerlink" href="#module-statstuff.regression" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="statstuff.regression.linear">
+<code class="descclassname">statstuff.regression.</code><code class="descname">linear</code><span class="sig-paren">(</span><em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/statstuff/regression.html#linear"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#statstuff.regression.linear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the intercept and the coefficient for
+a linear regression equation</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">x Explanatory values</p>
+<p class="last">y Dependent values</p>
+</dd>
+<dt>Returns:</dt>
+<dd>float: The intercept and b the coefficient</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="statstuff.regression.predict">
+<code class="descclassname">statstuff.regression.</code><code class="descname">predict</code><span class="sig-paren">(</span><em>features</em>, <em>parameters</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/statstuff/regression.html#predict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#statstuff.regression.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predicts the due value given the regression features and parameters</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">features Regression equation features</p>
+<p class="last">parameters Regression equation parameters</p>
+</dd>
+<dt>Returns:</dt>
+<dd>float: The value predicted from features and parameters</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="statstuff.regression.predict_sigmoid">
+<code class="descclassname">statstuff.regression.</code><code class="descname">predict_sigmoid</code><span class="sig-paren">(</span><em>features</em>, <em>parameters</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/statstuff/regression.html#predict_sigmoid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#statstuff.regression.predict_sigmoid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the sigmoid value for the predicted
+value from givem features and parameters</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">features Regression equation features</p>
+<p class="last">parameters Regression equation parameters</p>
+</dd>
+<dt>Returns:</dt>
+<dd>float: The sigmoid value predicted from features and parameters</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

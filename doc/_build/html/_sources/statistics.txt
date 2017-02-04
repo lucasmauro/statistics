@@ -1,5 +1,5 @@
 Statistics module
 =================
 
-.. automodule:: statistics
+.. automodule:: statstuff.statistics
     :members:

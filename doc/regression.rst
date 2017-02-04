@@ -1,5 +1,5 @@
 Regression module
 =================
 
-.. automodule:: regression
+.. automodule:: statstuff.regression
     :members:
